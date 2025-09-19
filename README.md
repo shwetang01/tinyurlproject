@@ -1,6 +1,6 @@
 # 🔗 TinyURL - URL Shortener
 
-A simple and functional URL shortener built with **Node.js**, **MongoDB**, and **EJS**. This project allows users to convert long URLs into short, shareable links with click tracking and a basic UI.
+A simple and functional URL shortener built with **Node.js**,**Express**, **MongoDB**, and **EJS**. This project allows users to convert long URLs into short, shareable links with click tracking and a basic UI.
 
 ---
 
@@ -19,8 +19,7 @@ A simple and functional URL shortener built with **Node.js**, **MongoDB**, and *
 
 ## 📷 Demo Screenshot
 
-![TinyURL Demo](<img width="1428" height="808" alt="image" src="https://github.com/user-attachments/assets/5b999c5e-a155-41c7-93cc-b0254921550a" />
-)
+![TinyURL Demo](https://github.com/shwetang01/tinyurlproject/blob/main/Screenshot%202025-09-20%20031802.png)
 
 ---
 
