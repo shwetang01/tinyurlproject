@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home_TinyUrl</title>
+  </head>
+  <body>
+    <h1>
+      Tiny-Url
+      <!-- <%= 2+2 %>  -->
+    </h1>
+    <h3>Url shortner</h3>
+    <% if (locals.id) { %>
+    <p>
+      Url generated :
+      <a href="http://localhost:8001/<%= id %>" target="_blank">
+        http://localhost:8001/<%= id %>
+      </a>
+    </p>
+
+    <% } %>
+
+    <div>
+      <form method="POST" action="/url">
+        <label for="">Enter the url to shorten </label>
+        <input type="text" placeholder="https://example.com" name="url" />
+        <button type="submit">Generate</button>
+      </form>
+    </div>
+
+    <div>
+      <% if (locals.urls) { %>
+      <table>
+        <thead>
+          <th>Sno.</th>
+          <th>short id</th>
+          <th>redirect</th>
+          <th>Clicks</th>
+        </thead>
+        <tbody>
+          <% locals.urls.forEach((url,index) => { %>
+          <tr>
+            <td><%= index+1 %></td>
+            <td>
+              <a
+                href="http://localhost:8001/<%= url.shortId %>"
+                target="_blank"
+              >
+                <%= url.shortId %>
+              </a>
+            </td>
+
+            <td>
+              <a href="<%= url.redirectUrl %>" target="_blank">
+                <%= url.redirectUrl %>
+              </a>
+            </td>
+
+            <td><%= url.visitHistory.length %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <% } %>
+    </div>
+  </body>
+</html>
